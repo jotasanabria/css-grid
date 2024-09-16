@@ -1,0 +1,107 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background: rgb(247, 131, 54);
+	padding: 40px 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+}
+
+.contenedor {
+	max-width: 1000px;
+	width: 90%;
+	margin: auto;
+}
+
+header {
+	margin-bottom: 40px;
+}
+
+header h3 {
+	color: #ffffff;
+}
+
+header h1 {
+    color: white;
+	font-size: 60px;
+	font-weight: normal;
+}
+
+.publicaciones {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap: 20px;
+}
+
+.publicacion {
+	padding: 20px;
+	background: #3a3abd;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+	border-radius: 5px;
+
+	display: grid;
+    grid-row: span 3;
+    grid-template-rows: subgrid;
+    grid-column: span 3;
+}
+
+.publicacion .titulo {
+	color: #ffffff;
+	font-size: 32px;
+	margin: 0;
+    grid-column: span 3;
+	
+}
+
+.publicacion .texto {
+	line-height: 28px;
+	color: #ffffff;
+    grid-column: span 3;
+	
+}
+.publicacion .botones{
+    grid-column: span 3;
+    display: grid;
+    grid-template-columns: subgrid;
+
+}
+
+.publicacion button {
+	margin-right: 20px;
+	
+	text-align: left;
+	border: none;
+	background: none;
+	padding: 0;
+	cursor: pointer;
+
+}
+
+/* .fa-solid {
+    color: white;
+}
+
+.fa-message {
+    color: white;
+}
+
+.button .comentario {
+    color: white;
+} */
+
+
+.publicacion button.comentario i {color: #1db403;}
+.publicacion button.favoritos i {color: #FF0000;}
+.publicacion button.retweets i {color: #f725c9;}
+
+@media screen  and (max-width:850px){
+    .publicaciones{
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
